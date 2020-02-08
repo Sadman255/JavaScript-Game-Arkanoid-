@@ -30,7 +30,8 @@ function gameLoop(timestamp) {
     // ball.update(deltaTime);
     // ball.draw(ctx);
 
-     game.update(deltaTime);
+     game.update(deltaTime,ctx);
+    //  game.updateScore(ctx)
      game.draw(ctx);
  
 
