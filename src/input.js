@@ -18,6 +18,11 @@ export default class InputHandler {
                 case 27:
                     console.log("Pause")
                     game.togglePause();
+                    break;
+
+                case 32: 
+                    game.start();
+                    break;
             }
         })
 

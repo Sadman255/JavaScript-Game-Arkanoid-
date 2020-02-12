@@ -14,7 +14,7 @@ const GAME_HEIGHT = 600;
 ctx.clearRect(0,0,800,600)
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
-game.start();
+// game.start();
 
 let lastTime = 0;
 
@@ -33,6 +33,7 @@ function gameLoop(timestamp) {
      game.update(deltaTime,ctx);
     //  game.updateScore(ctx)
      game.draw(ctx);
+    
  
 
     requestAnimationFrame(gameLoop);
