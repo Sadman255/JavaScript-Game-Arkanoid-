@@ -51,6 +51,7 @@ export default class Game {
         this.gameState = GAMESTATE.RUNNING ;
 
         // new InputHandler(this.paddle, this);
+        // testing
     } 
 
     update(deltaTime,ctx){
