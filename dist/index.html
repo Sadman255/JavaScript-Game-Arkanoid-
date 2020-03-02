@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title> Arkanoid-JavaScript</title>
+            <link rel="shortcut icon" type="image/png" href="./img/fish.png" style="width: 50px; height:50px">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             #arkanoid {
                 border: 1px solid black;
@@ -10,18 +12,109 @@
                 background-attachment: fixed;
                 background-size: cover;
                 background-image: url('./img/blurry-dust-particles.jpg');
+                display: flex;
+                justify-content: center;
+                position: relative;
+
             }
         
             img {
                 display: none; 
               
             }
+
+            #links {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 20px;
+                position: absolute;
+                top: 600px;
+                left: 400px;
+             }
+
+            #links a {
+            display: flex;
+            color: black;
+            font-size: 35px;
+            text-shadow: 0 0 4px black;
+            /* opacity: .7; */
+            transition: opacity .5s, text-shadow .5s;
+            margin-bottom: 10px;
+            margin-left: 30px;
+            padding: 30px;
+            flex-direction: row;
+            justify-content: center;
+            text-decoration: none;
+            }
+
+            #links a:hover {
+            text-shadow: 0 0 8px black ;
+            opacity: 1;
+            }
+
+            #controls {
+                display: flex;
+                position: absolute;
+                border: 2px solid red;
+                border-width: 30px;
+                flex-direction: column;
+                /* display: inline-block; */
+                padding: 20px;
+                margin-top: 5px;
+                height: 480px;
+                width: 150px;
+            }
+
+            #how-to{
+                 display: flex; 
+                 position:absolute;
+                border: 2px solid red;
+                border-width: 30px;
+                flex-direction: column;
+                /* display: inline-block; */
+                padding: 20px;
+                margin-top: 5px;
+                height: 480px;
+                width: 150px;
+                left: 1163px;
+                float: right;
+
+            }
         </style>
     </head> 
     <body>
+        <div id="controls">
+            <h1>Controls</h1>
+
+            <p>Press Spacebar to Start</p>
+            <p> Use left arrow to move left</p>
+            <p> Use right arrow to move right</p>
+            <p> Press Escape key to pause</p>
+            <p> Press Space to unpause</p>
+        
+        </div>
+
+        <div id="how-to">
+            <h1>Instructions</h1>
+        
+            <p>You are underwater and you must fight against a group of blood-thirsty whales. You only have 3 lives. Use the paddle to controll the ball and kill the whales before you run out of your lives. You gain 5 points for each whale killed. You lose a life when the ball falls off before reaching the paddle. </p>
+            <p>Good Luck!</p>
+        
+        </div>
+       <div id="main">
         <img id="image-ball" src="./img/ball.png" >
         <img id="fish-brick" src="./img/fish.png">
+        
         <canvas id="arkanoid" width="800" height="600"></canvas>
+      
+        <div id="links">
+            <a href="https://github.com/Sadman255"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sadman-anwar-115047159/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://angel.co/sadman-anwar"><i class="fa fa-angellist"></i></a>
+            <a href="#"><i class="fa fa-folder-open"></i></a>
+        </div>
+      </div>
         <script type="text/javascript" src="./main.js"></script>
     </body>
   <!-- test -->
